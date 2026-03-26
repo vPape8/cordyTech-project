@@ -5,7 +5,7 @@ El objetivo es que trabajen en **GitLab** (donde están las herramientas de equi
 ---
 
 ## Paso A: Preparar GitHub
-1. **Crear repositorio:** Crea un repositorio vacío en GitHub con el mismo nombre que el proyecyo de gitlab (sin README, sin licencia, sin `.gitignore`).
+1. **Crear repositorio:** Crea un repositorio vacío en GitHub con el mismo nombre que el proyecto de gitlab (sin README, sin licencia, sin `.gitignore`).
 2. **Generar Token:** Ve a `Settings` > `Developer Settings` > `Personal Access Tokens` > `Tokens (classic)`.
 3. **Permisos:** Genera un nuevo token con el permiso **repo** activado. 
    >  **Nota: Cópialo de inmediato; no volverás a verlo.**
