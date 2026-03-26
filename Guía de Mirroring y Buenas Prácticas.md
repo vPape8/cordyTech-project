@@ -6,9 +6,10 @@ El objetivo es que trabajen en **GitLab** (donde están las herramientas de equi
 
 ## Paso A: Preparar GitHub
 1. **Crear repositorio:** Crea un repositorio vacío en GitHub con el mismo nombre que el proyecto de gitlab (sin README, sin licencia, sin `.gitignore`).
-2. **Generar Token:** Ve a `Settings` > `Developer Settings` > `Personal Access Tokens` > `Tokens (classic)`.
-3. **Permisos:** Genera un nuevo token con el permiso **repo** activado. 
-   >  **Nota: Cópialo de inmediato; no volverás a verlo.**
+2. **Generar Token:** Ve a tú perfil  `Settings` > `Developer Settings` > `Personal Access Tokens` > `Tokens (classic)`.
+3. **Permisos:** Genera un nuevo token (sugerencia de nombre: token Gitlab) con el permiso **repo** activado. 
+   >  **Nota 1: Cópialo y guardalo de inmediato; no volverás a verlo.**
+   >  **Nota 2: Revisa la fecha de duracion del token**
 
 ## Paso B: Configurar el Mirror en GitLab
 1. En tu proyecto de GitLab, ve a **Settings** > **Repository**.
