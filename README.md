@@ -59,3 +59,52 @@ Si Git te avisa de un conflicto al intentar unir tu código con `main`:
 ---
 
 > **Tip:** No satures el repositorio.Usa siempre `git status` antes de hacer un `add` para confirmar que no estás subiendo archivos temporales o carpetas pesadas como `node_modules`.
+
+---
+# Guia de branch y commits
+##  1. Nomenclatura de Ramas (Branching)
+Las ramas deben ser descriptivas y estar vinculadas a una **Issue**.
+**Estructura:** `tipo/nro-issue-descripcion-breve`
+
+| Prefijo | Uso | Ejemplo |
+| :--- | :--- | :--- |
+| `feature/` | Nueva funcionalidad | `feature/12-login-jwt` |
+| `bugfix/` | Corrección de error en desarrollo | `bugfix/45-error-cors-react` |
+| `hotfix/` | Parche crítico para producción | `hotfix/99-fuga-memoria-ec2` |
+| `refactor/` | Mejora de código sin cambios funcionales | `refactor/30-limpieza-hooks-perfil` |
+
+---
+
+##  2. Mensajes de Commit (Conventional Commits)
+Adoptaremos el estándar **Conventional Commits** para facilitar el entendimiento del historial.
+
+**Formato:** `<tipo>: <descripción en presente>`
+
+### Tipos permitidos:
+* `feat`: Una nueva característica para el usuario.
+* `fix`: Solución de un error.
+* `docs`: Cambios solo en la documentación (README, Swagger).
+* `style`: Cambios de formato (espacios, punto y coma) que no afectan la lógica.
+* `refactor`: Cambio de código que no arregla un error ni añade una función.
+* `test`: Añadir o corregir pruebas unitarias (JUnit, Jest).
+* `chore`: Actualizar dependencias de Maven o npm.
+
+**Ejemplos:**
+* ✅ `feat: agregar validación de RUT en el registro de usuarios`
+* ✅ `fix: corregir parpadeo en el navbar al recargar React`
+* ❌ `cambios en el login` (Muy vago)
+* ❌ `borré archivos que no servían` (No especifica impacto)
+
+---
+
+## 3. Anatomía de un Commit Perfecto
+Si el cambio es complejo, usa el **cuerpo del commit** para dar contexto:
+
+```text
+feat: implementar integración con AWS S3 para fotos de perfil
+
+- Se añade el SDK de AWS al pom.xml de Spring Boot.
+- Se crea el Service para subir y eliminar objetos en el bucket.
+- Se actualiza el controlador de usuario para recibir MultipartFile.
+
+Closes #15
